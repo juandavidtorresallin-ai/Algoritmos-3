@@ -206,10 +206,16 @@ int main(){
         nodo2 = insertarTermino (nodo2, coeficiente,exponente);
     }
     imprimirPolinomio(nodo2);
-    cout<<"Liberar memoria ";
+
+    Termino* suma = sumarPolinomios(nodo, nodo2);
+    cout << "Suma de los polinomios: ";
+    imprimirPolinomio(suma);
+
+    cout<<"Liberar memoria "<<endl;
     int liberar = 0;
     liberar = destruirPolinomio(nodo);
     liberar = destruirPolinomio(nodo2);
+    destruirPolinomio(suma);
     cout<<"se libero el nodo 1 y 2";
 
 
