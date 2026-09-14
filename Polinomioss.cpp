@@ -206,4 +206,11 @@ int main(){
         nodo2 = insertarTermino (nodo2, coeficiente,exponente);
     }
     imprimirPolinomio(nodo2);
+    cout<<"Liberar memoria ";
+    int liberar = 0;
+    liberar = destruirPolinomio(nodo);
+    liberar = destruirPolinomio(nodo2);
+    cout<<"se libero el nodo 1 y 2";
+
+
 }
